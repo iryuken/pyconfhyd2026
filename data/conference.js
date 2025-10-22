@@ -47,8 +47,8 @@ export const ASSETS = {
 };
 
 export const KEY_LINKS = {
-  volunteerFormLabel: 'BECOME A VOLUNTEER',
-  volunteerFormUrl: '',
+  volunteerFormLabel: 'SIGN UP TO VOLUNTEER',
+  volunteerFormUrl: 'https://forms.gle/XKpdqSX12husAXBB6',
   cfpLabel: 'SUBMIT YOUR PROPOSAL',
   cfpUrl: '',
   interestedInSponsoringLabel: 'INTERESTED IN SPONSORING',

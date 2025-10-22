@@ -25,6 +25,6 @@ export const SCHEDULE = {
           speakers: [getSpeaker('pyconf-hyderabad-team')],
         },
       ],
-    ] 
+    ],
   },
 };

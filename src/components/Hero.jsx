@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
-import { Heading, Paragraph, Span } from '@/components/Typography';
+import { Heading, Span } from '@/components/Typography';
 import Icon from '@/components/Icon';
-import { CONFERENCE, ASSETS } from '@/conference';
+import { CONFERENCE, ASSETS, KEY_LINKS } from '@/conference';
 import Link from 'next/link';
 
 const Hero = () => {
@@ -81,6 +81,19 @@ const Hero = () => {
             <Span level={3}>{CONFERENCE.workshopVenue}</Span>
           </Link>
         </div> */}
+        <div className="flex flex-col sm:flex-row pt-4">
+          <Link
+            href={KEY_LINKS.volunteerFormUrl}
+            target="_blank"
+            className="flex justify-center"
+            rel="noopener noreferrer"
+          >
+            <button className="inline-flex mt-2 sm:mr-4 items-center bg-secondary-600 px-5 py-3 font-medium hover:bg-secondary-700 text-gray-50 border rounded-lg">
+              <Icon name="VolunteerActivism" size={20} />
+              <Span className="ml-2">{KEY_LINKS.volunteerFormLabel}</Span>
+            </button>
+          </Link>
+        </div>
       </div>
     </section>
   );
