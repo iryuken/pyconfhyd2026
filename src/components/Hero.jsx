@@ -83,6 +83,19 @@ const Hero = () => {
         </div> */}
         <div className="flex flex-col sm:flex-row pt-4">
           <Link
+            href={KEY_LINKS.interestedInSponsoringUrl}
+            target="_blank"
+            className="flex justify-center"
+            rel="noopener noreferrer"
+          >
+            <button className="inline-flex mt-2 sm:mr-4 items-center bg-primary-600 px-5 py-3 font-medium hover:bg-primary-700 text-gray-50 border rounded-lg">
+              <Icon name="VolunteerActivism" size={20} />
+              <Span className="ml-2">
+                {KEY_LINKS.interestedInSponsoringLabel}
+              </Span>
+            </button>
+          </Link>
+          <Link
             href={KEY_LINKS.volunteerFormUrl}
             target="_blank"
             className="flex justify-center"

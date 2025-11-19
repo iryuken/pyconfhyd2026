@@ -52,7 +52,7 @@ export const KEY_LINKS = {
   cfpLabel: 'SUBMIT YOUR PROPOSAL',
   cfpUrl: '',
   interestedInSponsoringLabel: 'INTERESTED IN SPONSORING',
-  interestedInSponsoringUrl: '',
+  interestedInSponsoringUrl: 'https://forms.gle/rLNiPdrSi3NZ772n9',
   sponsorshipProspectusLabel: 'SPONSORSHIP PROSPECTUS',
   sponsorshipProspectusUrl: '',
   konfHubEventPageLabel: 'KonfHub event page',
