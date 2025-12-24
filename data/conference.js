@@ -62,9 +62,9 @@ export const KEY_LINKS = {
   konfHubEventPageLabel: 'KonfHub event page',
   konfHubEventPage: '',
   CommunityPartnersProspectusLabel: 'PROSPECTUS',
-  CommunityPartnersProspectusUrl: '',
-  CommunityPartnersProspectusRegisterFormLabel: 'REGISTER',
-  CommunityPartnersProspectusRegisterFormUrl: '',
+  CommunityPartnersProspectusUrl: '/docs/community-partners-prospectus.pdf',
+  CommunityPartnersProspectusRegisterFormLabel: 'APPLY AS A COMMUNITY PARTNER',
+  CommunityPartnersProspectusRegisterFormUrl: 'https://forms.gle/a6YuXQG6t7kkywNo8',
 };
 
 export const SOCIALS = [
