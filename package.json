@@ -2,6 +2,10 @@
   "name": "pyconfhyd2026",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.18.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
