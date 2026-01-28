@@ -32,6 +32,12 @@ export const NAV_ITEMS = [
         target: '_self',
         featureFlag: 'MEET_ORGANIZERS',
       },
+      {
+        name: 'Epic Frames',
+        path: '/#epic-frames',
+        target: '_self',
+        featureFlag: 'EPIC_FRAMES',
+      },
     ],
   },
   {
