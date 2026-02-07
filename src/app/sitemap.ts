@@ -42,6 +42,48 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
+    {
+      url: 'https://2026.pyconfhyd.org/cfp-guidelines',
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: 'https://2026.pyconfhyd.org/convince-my-boss',
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.6,
+    },
+    {
+      url: 'https://2026.pyconfhyd.org/job-board',
+      lastModified: new Date(),
+      changeFrequency: 'daily' as const,
+      priority: 0.9,
+    },
+    {
+      url: 'https://2026.pyconfhyd.org/job-board-rules-guidelines',
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.5,
+    },
+    {
+      url: 'https://2026.pyconfhyd.org/our-team',
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: 'https://2026.pyconfhyd.org/tickets',
+      lastModified: new Date(),
+      changeFrequency: 'daily' as const,
+      priority: 1.0,
+    },
+    {
+      url: 'https://2026.pyconfhyd.org/welcome-guide',
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
   ];
 
   // sitemap for speaker pages
