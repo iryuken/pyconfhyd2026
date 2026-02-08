@@ -24,4 +24,32 @@ export const getSponsors = () => {
   return sponsors;
 };
 
-export const SPONSORS = {};
+export const SPONSORS = {
+  Platinum: [
+    {
+      name: 'ASBL',
+      imgUrl: '/images/sponsors/asbl.png',
+      imgAlt: 'ASBL logo',
+      hyperLink: '/blogs/asbl-platinum-sponsor/',
+      socials: [
+        {
+          name: 'LinkedIn',
+          url: 'https://www.linkedin.com/company/asblindia/',
+          ariaLabel: 'Hyperlink to ASBL LinkedIn page.',
+        },
+        {
+          name: 'Instagram',
+          url: 'https://www.instagram.com/asblindia/',
+          ariaLabel: 'Hyperlink to ASBL Instagram page.',
+        },
+        {
+          name: 'Globe',
+          url: 'https://asbl.in/',
+          ariaLabel: 'Hyperlink to ASBL website.',
+        },
+      ],
+    },
+  ],
+  Gold: [],
+  Silver: [],
+};
