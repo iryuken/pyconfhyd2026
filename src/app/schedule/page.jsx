@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Heading, Span } from '@/components/Typography';
 import Icon from '@/components/Icon';
 import Image from 'next/image';
+import SpeakerInitials from '@/components/SpeakerInitials';
 
 import { SCHEDULE } from '@/schedule';
 import Link from 'next/link';
@@ -67,14 +68,20 @@ const SpeakerCard = ({ speaker }) => {
     <div className="flex flex-row items-center my-1">
       <div className="w-12 h-12 md:w-16 md:h-16">
         <div className="relative shadow-md h-full w-full rounded-full overflow-hidden border-1">
-          <Image
-            className="object-cover rounded-sm"
-            src={speaker.imgUrl}
-            alt={`Placeholder image of ${speaker.name}`}
-            title={`Image of ${speaker.name}`}
-            loading="lazy"
-            fill
-          />
+          {speaker.imgUrl ? (
+            <Image
+              className="object-cover rounded-sm"
+              src={speaker.imgUrl}
+              alt={`Image of ${speaker.name}`}
+              title={`Image of ${speaker.name}`}
+              loading="lazy"
+              fill
+            />
+          ) : (
+            <div className="h-full w-full flex items-center justify-center bg-primary-600 dark:bg-primary-700 text-white font-semibold text-2xl">
+              <SpeakerInitials speaker={speaker} />
+            </div>
+          )}
         </div>
       </div>
       <div className="flex flex-col ml-2">
@@ -172,7 +179,7 @@ const ScheduleItem = ({
 };
 
 const Schedule = () => {
-  const [activeDay, setActiveDay] = useState('day2');
+  const [activeDay, setActiveDay] = useState('day1');
   const { sessions } = SCHEDULE[activeDay];
   const isScheduleEmpty = !sessions || sessions.length === 0;
 
@@ -185,7 +192,7 @@ const Schedule = () => {
             onClick={() => setActiveDay(day)}
             className={`flex flex-col items-center px-6 md:px-12 py-2 border border-primary-800 focus:ring-2 shadow-md rounded-xl ${
               activeDay === day
-                ? 'bg-primary-700 dark:bg-primary-700 text-white dark:text-gray-50'
+                ? 'bg-primary-800 dark:bg-primary-800 text-white dark:text-gray-50'
                 : 'bg-gray-50 dark:bg-gray-900 text-gray-950 dark:text-gray-50'
             }`}
           >
