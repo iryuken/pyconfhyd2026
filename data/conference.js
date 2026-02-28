@@ -7,14 +7,20 @@ export const CONFERENCE = {
   },
   announcement:
     'Hyderabad’s biggest Python conference is on the way! <br> Get ready for an unforgettable experience and stay tuned for updates!',
-  siteURL: 'http://2026.pyconfhyd.org',
+  siteURL: 'https://2026.pyconfhyd.org',
   copyrightTitle: 'Copyright @ 2026 PyConf Hyderabad',
   conferenceDate: '15 Mar',
   conferenceVenue: 'Engineering Staff College of India',
+  conferenceVenueAddress:
+    'ESCI Road, Lake, beside Khajaguda, Gachibowli, Hyderabad, Telangana 500032',
   conferenceMapsLink: 'https://maps.app.goo.gl/tMbBxW1wD7RUUyJR8',
+  conferenceImageLink: '/images/conferenceVenueImage.jpg',
   workshopDate: '14 Mar',
-  workshopVenue: 'TBD',
+  workshopVenue: 'EPAM Systems',
+  workshopVenueAddress:
+    '11th Floor, Gowra Palladium, Silpa Gram Craft Village, Madhapur, Hyderabad, Telangana',
   workshopMapsLink: '',
+  workshopImageLink: '/images/monumentsSketch.svg',
   creator: 'HydPy',
   dates: '14 - 15 March',
   generator: 'Next.js',

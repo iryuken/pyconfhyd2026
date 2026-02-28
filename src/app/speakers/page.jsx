@@ -1,6 +1,15 @@
-import Speaker from '@/components/Speaker';
+import { Speaker } from '@/components/Speaker';
 import { Heading } from '@/components/Typography';
 import { SPEAKERS } from '@/speakers';
+
+export const metadata = {
+  title: 'Speakers',
+  description: 'Speakers at PyConf Hyderabad 2026',
+  openGraph: {
+    title: 'Speakers',
+    description: 'Speakers at PyConf Hyderabad 2026',
+  },
+};
 
 const getSessionSpeakers = (SPEAKERS) => {
   const speakers = new Map();
@@ -31,7 +40,7 @@ export default function Page() {
       >
         Speakers
       </Heading>
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+      <div className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
         {ALL_SPEAKERS.map((speaker, index) => (
           <Speaker key={index} speaker={speaker} />
         ))}

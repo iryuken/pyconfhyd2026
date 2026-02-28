@@ -5,9 +5,8 @@ import Hero from '@/components/Hero';
 import KeynoteSpeakers from '@/components/KeynoteSpeakers';
 import MeetOrganizer from '@/components/MeetOrganizers';
 import SponsorsSection from '@/components/Sponsors';
+import MeetSpeakers from '@/components/MeetSpeakers';
 import CommunityPartners from '@/components/CommunityPartners';
-import WhyAttend from '@/components/WhyAttend';
-import EpicFrames from '@/components/EpicFrames';
 import { useFeatureFlag } from '@/hooks/useFeatureFlag';
 
 import { SPEAKERS } from '@/speakers';
@@ -29,11 +28,10 @@ const getKeynoteSpeakers = (SPEAKERS) => {
 
 export default function Home() {
   const isKeynoteSpeakersEnabled = useFeatureFlag('KEYNOTE_SPEAKERS');
+  const isMeetSpeakersEnabled = useFeatureFlag('MEET_SPEAKERS');
   const isSponsorsEnabled = useFeatureFlag('SPONSORS');
   const isCommunityPartnersEnabled = useFeatureFlag('COMMUNITY_PARTNERS');
   const isMeetOrganizersEnabled = useFeatureFlag('MEET_ORGANIZER');
-  const isWhyAttendEnabled = useFeatureFlag('WHY_ATTEND');
-  const isEpicFramesEnabled = useFeatureFlag('EPIC_FRAMES');
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -51,11 +49,10 @@ export default function Home() {
       {isKeynoteSpeakersEnabled && (
         <KeynoteSpeakers speakers={getKeynoteSpeakers(SPEAKERS)} />
       )}
-      {isWhyAttendEnabled && <WhyAttend />}
+      {isMeetSpeakersEnabled && <MeetSpeakers />}
       {isSponsorsEnabled && <SponsorsSection />}
       {isCommunityPartnersEnabled && <CommunityPartners />}
       {isMeetOrganizersEnabled && <MeetOrganizer />}
-      {isEpicFramesEnabled && <EpicFrames />}
     </>
   );
 }

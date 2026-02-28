@@ -11,6 +11,29 @@ export function generateStaticParams() {
   return SPEAKERS.map((speaker) => ({ slug: speaker.slug }));
 }
 
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const speaker = SPEAKERS.find(
+    (s) => s.slug === slug && s.activeSpeakerPage === true
+  );
+
+  if (!speaker) {
+    return {
+      title: 'Speaker',
+      description: 'Speaker details for PyConf Hyderabad 2026',
+    };
+  }
+
+  return {
+    title: `${speaker.name}`,
+    description: `Speaker profile of ${speaker.name} at PyConf Hyderabad 2026`,
+    openGraph: {
+      title: `${speaker.name}`,
+      description: `Speaker profile of ${speaker.name} at PyConf Hyderabad 2026`,
+    },
+  };
+}
+
 const getTalkDetailsBySlug = (slug) => {
   // Find the speaker by slug
   const speaker = SPEAKERS.find(
@@ -75,15 +98,15 @@ export default async function SpeakerPage({ params }) {
             </div>
           </div>
           <Heading
-            level={2}
+            level={3}
             tagLevel={1}
-            className="mt-6 mb-2 text-center text-primary-600 dark:text-primary-400"
+            className="mt-6 mb-2 text-center text-gray-950 dark:text-gray-50"
           >
             {speaker.name}
           </Heading>
           {speaker.title && (
             <Span
-              level={3}
+              level={2}
               className="text-center text-gray-950 dark:text-gray-50"
             >
               {speaker.title}

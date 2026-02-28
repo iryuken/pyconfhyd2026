@@ -24,6 +24,17 @@ import {
   FaCode,
   FaHeart,
   FaBowlFood,
+  FaUpload,
+  FaDownload,
+  FaRotateLeft,
+  FaLink,
+  FaWhatsapp,
+  FaMinus,
+  FaPlus,
+  FaCircleHalfStroke,
+  FaCircle,
+  FaMedium,
+  FaEnvelopeOpenText,
 } from 'react-icons/fa6';
 import { FaExternalLinkAlt, FaArrowCircleRight } from 'react-icons/fa';
 import { MdLightMode, MdDarkMode } from 'react-icons/md';
@@ -65,6 +76,17 @@ const icons = {
   Code: FaCode,
   Heart: FaHeart,
   BowlFood: FaBowlFood,
+  Upload: FaUpload,
+  Download: FaDownload,
+  RotateLeft: FaRotateLeft,
+  Link: FaLink,
+  WhatsApp: FaWhatsapp,
+  Minus: FaMinus,
+  Plus: FaPlus,
+  CircleHalfStroke: FaCircleHalfStroke,
+  Circle: FaCircle,
+  Medium: FaMedium,
+  EnvelopeOpenText: FaEnvelopeOpenText,
 };
 
 export const Icon = ({ name, size = 36, className = '', padding = 0 }) => {
